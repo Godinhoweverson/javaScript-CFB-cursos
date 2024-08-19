@@ -6,14 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
-  <title>Aula 52 JavaScript</title>
+  <title>Aula 63 JavaScript</title>
 </head>
 
 <body>
-  <div class="carros">
-
+  <div id="criarCarro" class="criarCarro">
+    <div class="campoForm">
+      <label>Nome:</label>
+      <input type="text" name="f_nome" id="f_nome" value="">
+    </div>
+    <div class="campoForm">
+      <label>Portas:</label>
+      <input type="number" name="f_portas" id="f_portas" value="0">
+    </div>
+    <div class="campoForm">
+      <label>Blidangem:</label>
+      <input type="number" name="f_blindagem" id="f_blindagem" disabled value="0">
+    </div>
+    <div class="campoForm">
+      <label>Municao:</label>
+      <input type="number" name="f_municao" id="f_municao" disabled value="0">
+    </div>
+    <div class="campoForm">
+      <label>Tipo</label>
+      <div class="radio">
+        <input type="radio" name="f_tipo" id="f_tipoMilitar" value="m" />Militar
+      </div>
+      <div class="radio">
+        <input type="radio" name="f_tipo" id="f_tipoNormal" value="n" checked />Normal
+      </div>
+    </div>
+    <div class="campoForm">
+      <button id="btn_addCarro">Adicionar</button>
+    </div>
   </div>
-  <script src="class62.js"></script>
+  <div id="carros" class="carros"></div>
+  <script src="class64.js"></script>
 </body>
 
 </html>
