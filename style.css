@@ -10,12 +10,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  position: absolute;
+  top: 0px;
+  left: -230px;
+  transition: all 0.2s;
+}
+
+.calc_exibir{
+  left: 0px !important;
+  transition: all 0.2s;
+}
+.calc_principal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   background-color:#eee;
   border: 3px solid #bbb;
   width: 230px;
   border-radius: 5px;
 }
+
+
 
 /* TITULO */
 .div_nome{
@@ -73,4 +90,16 @@
   padding: 5px;
   font-family: monospace;
   font-size: larger;
+}
+
+.calc_aba{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20px;
+  height: 50px;
+  background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 0px 5px 5px 0;
+  cursor: pointer;
 }
