@@ -3,4 +3,4 @@ import getTodoCursos from "./cursos2.js";
 import * as cursos from './cursos2.js'
 
 
-console.log(cursos);
+console.log(cursos.getCurso(1));
