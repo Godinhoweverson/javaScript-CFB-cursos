@@ -5,56 +5,26 @@
   box-sizing: border-box;
 }
 
-#form{
+.info{
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  width: 300px;
-  padding: 5px;
-  margin: 5px;
+  justify-content: space-around;
 }
 
-#campo{
+.quadrado{
+  position: absolute;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  flex-direction: column;
-  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
 }
 
-input[type=text]{
-  border: 1px solid #000;
-  padding: 5px;
-  border-radius: 5px;
-  width: 100%;
+#q1{
+  background-color: #f00;
+  top: 20px;
+  left: 100px;
 }
 
-button{
-  background-color: #bbb;
-  padding: 10px 30px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#listaContatos{
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  border: 3px solid #888;
-  border-radius: 5px;
-  margin: 5px;
-  width: calc(100% - 10px);
-}
-
-.contato{
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #000;
-  padding: 5px;
-  border-radius: 5px;
-  margin: 5px;
+#q2{
+  background-color: #00f;
+  top: 150px;
+  left: 350px;
 }
