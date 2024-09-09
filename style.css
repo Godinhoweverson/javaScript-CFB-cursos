@@ -5,26 +5,17 @@
   box-sizing: border-box;
 }
 
-.info{
-  display: flex;
-  justify-content: space-around;
+input{
+  border: 3px solid #aaa;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
-.quadrado{
-  position: absolute;
-  display: flex;
-  width: 100px;
-  height: 100px;
-}
-
-#q1{
-  background-color: #f00;
-  top: 20px;
-  left: 100px;
-}
-
-#q2{
-  background-color: #00f;
-  top: 150px;
-  left: 350px;
+button{
+  padding: 5px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #888;
+  color: #fff;
 }
