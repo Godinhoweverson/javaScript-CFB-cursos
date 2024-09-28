@@ -6,13 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <title>Aula 63 JavaScript</title>
 </head>
 
 <body>
-  <p id="p_texto"></p>
-  <button id="btn_texto">Fetch</button>
-  <script src="class122.js"></script>
+  <canvas id="grafico1" style="width: 300px; height: 300px;"></canvas>
+  <script>
+    const ctx = document.getElementById('grafico1');
+
+    let labelsx = ['Disponibilidade', 'Qualidade', 'Performance'];
+    let valores = [0, 0, 0]
+
+    let grafico1 = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: labelsx,
+        datasets: [{
+          label: '# of Votes',
+          data: valores,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    const obterDados = () => {
+
+      const endpoint = 'https://6c529a8d-9ac5-4c4e-a30d-684e358c78c2-00-2mlneml0p9h2q.spock.replit.dev/'
+      fetch(endpoint)
+        .then(res => res.json())
+        .then(res => {
+
+          valores[0] = res.disponibilidade
+          valores[1] = res.qualidad
+          valores[2] = res.performance
+          grafico1.update()
+        })
+        .catch(erro => {
+          console.log('ERRO: ' + erro)
+        })
+    }
+
+    let intervalo = setInterval(obterDados, 3000)
+  </script>
 </body>
+<script src="class127.js"></script>
 
 </html>
