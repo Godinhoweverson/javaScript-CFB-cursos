@@ -5,17 +5,9 @@
   box-sizing: border-box;
 }
 
-input{
-  border: 3px solid #aaa;
-  border-radius: 5px;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-button{
-  padding: 5px 30px;
+.btn_mostarcxmsg{
+  padding: 10px 40px;
   cursor: pointer;
   border-radius: 5px;
-  background-color: #888;
-  color: #fff;
+  margin: 5px;
 }
