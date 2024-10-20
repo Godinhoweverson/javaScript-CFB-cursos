@@ -6,12 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
-  <title>Aula 129 JavaScript</title>
+  <script src="https://cdn.jsdelivr.net/gh/Godinhoweverson/javaScript-CFB-cursos/login.js"></script>
+  <title>Aula 152 JavaScript</title>
 </head>
 
 <body>
 
-  <script src="class141.js" type="module"></script>
+  <div id="dgvProdutos" class="dgv">
+    <div id="dgvTitulos" class="dgvTitulos">
+      <div class="c1">ID</div>
+      <div class="c2">Produto</div>
+      <div class="c3">Marca</div>
+      <div class="c4">Modelo</div>
+      <div class="c5"> Funtions</div>
+    </div>
+    <div id="dgvDados" class="dgvDados">
+
+    </div>
+  </div>
+  <div id="janelaView" class="janelaView ocultar">
+    <div id="view" class="view">
+      <div class="campo">
+        <label>ID</label>
+        <input type="text" name="f_id" id="f_id" readonly>
+      </div>
+      <div class="campo">
+        <label>Produto</label>
+        <input type="text" name="f_produto" id="f_produto" readonly>
+      </div>
+      <div class="campo">
+        <label>Marca</label>
+        <input type="text" name="f_marca" id="f_marca" readonly>
+      </div>
+      <div class="campo">
+        <label>Modelo</label>
+        <input type="text" name="f_modelo" id="f_modelo" readonly>
+      </div>
+      <div class="campo rodape" id="rodape">
+        <button id="btn_ok" class="btn">Ok</button>
+      </div>
+    </div>
+  </div>
+  <script src="class152.js" type="module"></script>
 </body>
 
 </html>

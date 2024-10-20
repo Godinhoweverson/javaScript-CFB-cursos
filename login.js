@@ -7,15 +7,13 @@ class Login {
   static callback_ok = null;
   static callback_naook = null;
   static config = {
-    cor: "#048",
+    cor: null,
+    endpoint:null
+    // "https://055f7fe1-7b45-454c-8122-a94da5824767-00-25d7l54o1axbr.picard.replit.dev/"
   };
-  static endpoint =
-    "https://055f7fe1-7b45-454c-8122-a94da5824767-00-25d7l54o1axbr.picard.replit.dev/";
-
-  static login = (callback_ok, callback_naook, config = null) => {
-    if (config != null) {
-      this.config = config;
-    }
+ 
+  static login = (callback_ok, callback_naook, config) => {
+    this.config = config;
     this.callback_ok = () =>{
       callback_ok()
     }
@@ -101,6 +99,10 @@ class Login {
     btnCancelar.setAttribute("id", "btn_cancelar");
     btnCancelar.innerHTML = "Cancelar";
     btnCancelar.addEventListener("click", (evt) => {
+       sessionStoragesetItem("logado", "false");
+       sessionStoragesetItem("matlogado", "");
+       sessionStoragesetItem("nomelogado", "");
+       sessionStoragesetItem("acessologado", "");
       this.fechar();
     });
     botoesLogin.appendChild(btnCancelar);
@@ -119,23 +121,23 @@ class Login {
     const mat = document.querySelector("#f_username").value;
     const pas = document.querySelector("#f_senha").value;
 
-    const endpoint = `https://055f7fe1-7b45-454c-8122-a94da5824767-00-25d7l54o1axbr.picard.replit.dev/?matricula=${mat}&senha=${pas}`;
+    const endpoint = `${this.config.endpoint}/?matricula=${mat}&senha=${pas}`;
 
     fetch(endpoint)
       .then((res) => res.json())
       .then((res) => {
         if (res) {
-          this.logado = true;
-          this.matlogado = mat;
-          this.nomelogado = res.nome;
-          this.acessologado = res.acesso;
+          sessionStoragesetItem("logado", "true");
+          sessionStoragesetItem("matlogado", mat);
+          sessionStoragesetItem("nomelogado", res.nome);
+          sessionStoragesetItem("acessologado", res.acesso);
           this.callback_ok();
           this.fechar();
         } else {
-          this.logado = false;
-          this.matlogado = null;
-          this.nomelogado = null;
-          this.acessologado = null;
+          sessionStoragesetItem("logado", "false");
+          sessionStoragesetItem("matlogado", '');
+          sessionStoragesetItem("nomelogado", '');
+          sessionStoragesetItem("acessologado", '');
           this.callback_naook();
         }
       });

@@ -4,88 +4,138 @@
   margin: 0;
   box-sizing: border-box;
 }
-/* 
-.fundoLogin{
+
+
+.dgv{
+  display: flex;
+  justify-content:flex-start;
+  align-self:flex-start;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.dgvTitulos{
+  display: flex;
+  justify-content: flex-start;
+  align-self: flex-start;
+  flex-direction: row;
+  background-color: #138;
+  color: #fff;
+  border-radius: 5px 5px 0px 0px;
+}
+.dgvTitulos div, .dgvLinha div{
+  padding: 5px;
+}
+
+.dgvDados{
+  display: flex;
+  justify-content: flex-start;
+  align-self: flex-start;
+  flex-direction: column;
+}
+.dgvLinha{
+  display: flex;
+  justify-content: flex-start;
+  align-self: flex-start;
+  flex-direction: row;
+}
+
+.dgvLinha:nth-child(odd){
+  background-color: #ddd;
+}
+
+.dgvLinha:nth-child(even){
+  background-color: #eee ;
+}
+
+.dgvLinha:hover{
+  background-color: #088 !important;
+  color: #fff;
+  cursor: pointer;
+}
+
+.coluna{
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+}
+
+.c1{
+  width: 50px;
+}
+.c2{
+  width: 150px;
+}
+.c3{
+  width: 150px;
+}
+.c4{
+  width: 150px;
+}
+.c5{
+  width: 150px;
+  justify-content: space-around !important;
+
+}
+
+.dgvIcone{
+  width: 20px;
+}
+
+/*CAIXA DE VIEW */
+
+.janelaView{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
-  position: absolute;
-  top: 0px;
-  left: 0px;
   background-color: rgba(0,0,0,0.75);
 }
 
-.baseLogin{
-  display: flex;
-  justify-content: center;
-  align-items:stretch;
-  width: inherit;
-  height: 200px;
-
-}
-
-.elementosLogin{
-  display: flex;
-  justify-self:center;
-  align-items: center;
-  flex-direction: column;
-  height: inherit;
-  width: 50%;
-  background-color: #eee;
-  padding: 10px;
-  border-radius: 10px 0px 0px 10px;
-}
-
-.logoLogin{
-  display: flex;
-  justify-self: center;
-  align-items: center;
-  width: 50%;
-  height: inherit;
-  background-color: #bbb;
-  padding: 10px;
-  border-radius: 0px 10px 10px 0px;
-}
-
-.campoLogin{
+.view{
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  width: 100%;
-  margin-bottom: 10px;
-
-}
-
-.campoLogin label{
-  font-size: 18px;
-  width: 100%;
-
-}
-
-.campoLogin input {
-font-size: 18px;
-padding: 5px;
-background-color: #fff;
-border-radius: 5px;
- width: 100%;
-}
-
-.botoesLogin{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-
-}
-
-.botoesLogin button{
-  cursor: pointer;
-  background-color: #048;
-  color: #fff;
-  border-radius: 5px;
+  background-color: #aaa;
   padding: 10px;
-  width: 100px;
-} */
+  border-radius: 5px;
+
+
+}
+
+.campo{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 500px;
+}
+
+.campo input {
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+
+}
+
+.rodape{
+  align-items: center!important;
+}
+
+.btn{
+  background-color: #480;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.ocultar{
+  display: none !important;
+}
